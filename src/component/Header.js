@@ -8,12 +8,12 @@ export default function Header() {
             </h1>
 
             <div className="menu">
-                <a href="#x" className="link">
-                    Ajouter un mot
-                </a>
-                <a href="#x" className="link">
-                    Ajouter un jour
-                </a>
+                <Link to="/create_word" className="link" />
+                Ajouter un mot
+
+                <Link to="/Create_day" className="link" />
+                Ajouter un jour
+
             </div>
         </div>);
 }   

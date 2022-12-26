@@ -14,6 +14,9 @@ export default function Header() {
                 <Link to="/Create_day" className="link" />
                 Ajouter un jour
 
+                {/* <Link to="/Del_day" className="link" />
+                Delete day */}
+
             </div>
         </div>);
 }   

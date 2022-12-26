@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 export default function Word(props) {
 
     const [isShow, setIsShow] = useState(false);
@@ -29,9 +28,11 @@ export default function Word(props) {
 
     function del() {
         if (window.confirm("You Sure?")) {
-            fetch(`http://localhost:8000/words/${word.id}`, {
-                method: "DELETE",
-            }).then(res => {
+            fetch(`http://localhost:8000/words/${word.id}`,
+                {
+                    method: "DELETE",
+                }
+            ).then(res => {
                 if (res.ok) {
                     setWord({ id: 0 });
                 }
@@ -45,23 +46,25 @@ export default function Word(props) {
 
 
     return (
-        <tr className={isDone ? "off" : ""}>
-            <td>
-                <input type="checkbox" checked={isDone}
-                    onChange={toggleDone}
-                />
-            </td>
-            <td>
-                {word.eng}
-            </td>
-            <td>
-                {isShow && word.kor}
-            </td>
-            <td>
-                <button onClick={toggleShow}> {isShow ? "Hide meaning" : "View meaning"} </button>
-                <button onClick={del} className="btn_del">delete</button>
-            </td>
-        </tr>
+        
+            <tr className={isDone ? "off" : ""}>
+                <td>
+                    <input type="checkbox" checked={isDone}
+                        onChange={toggleDone}
+                    />
+                </td>
+                <td>
+                    {word.eng}
+                </td>
+                <td>
+                    {isShow && word.kor}
+                </td>
+                <td>
+                    <button onClick={toggleShow}> {isShow ? "Hide meaning" : "View meaning"} </button>
+                    <button onClick={del} className="btn_del">delete</button>
+                </td>
+            </tr>
+        
     );
 }
 /** 

@@ -6,7 +6,7 @@ export default function CreateDay() {
     const days = useFetch("http://localhost:8000/days")
     const history = useNavigate();
 
-    function addDay(e) {
+    function addDay() {
 
         fetch(`http://localhost:8000/days/`, {
             method: 'POST',
@@ -29,6 +29,5 @@ export default function CreateDay() {
             <button onClick={addDay}>Add day</button>
         </div>
     );
-
 
 }

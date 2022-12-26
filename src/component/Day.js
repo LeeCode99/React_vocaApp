@@ -4,6 +4,7 @@ import Word from "./Word"
 import { useParams } from "react-router-dom";
 // import { useEffect, useState } from "react";
 import useFetch from "../hooks/useFetch";
+import DelDay from "./DelDay";
 
 export default function Day() {
 
@@ -23,8 +24,12 @@ export default function Day() {
                     {words.map(word => (
                         <Word word={word} key={word.id} />
                     ))}
+
                 </tbody>
+
+
             </table>
+            <DelDay />
         </>
     );
 }

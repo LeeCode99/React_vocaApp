@@ -3,11 +3,15 @@
     {
       "day": 1,
       "id": 1
+    },
+    {
+      "day": 2,
+      "id": 2
     }
   ],
   "words": [
     {
-      "day": "2",
+      "day": "1",
       "eng": "dsd",
       "kor": "ds",
       "isDone": false,
